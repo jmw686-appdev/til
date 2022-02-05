@@ -2,7 +2,7 @@
 title:               'Today I Learned'
 tagline:             'Notes to self about software development'
 description:         ''
-url:                 https://www.jelani.dev
+url:                 https://www.jelaniwoods.io
 baseurl:             '/'
 paginate:            5
 permalink:           pretty
@@ -10,7 +10,7 @@ permalink:           pretty
 # About/contact
 author:
   name:              Jelani Woods
-  url:               https://www.jelani.dev
+  url:               https://www.jelaniwoods.io
   email:             jelani@firstdraft.com
 
 # Gems
