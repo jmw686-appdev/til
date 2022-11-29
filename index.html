@@ -94,6 +94,32 @@
               .see-through {
                 background-color: rgba(0, 0, 0, 0);
               }
+
+      /* Tooltip container */
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+      }
+
+      /* Tooltip text */
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 1;
+      }
+
+      /* Show the tooltip text when you mouse over the tooltip container */
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+      }
             </style>
           </div>
         </div>
@@ -116,11 +142,17 @@
               <a href="https://github.com/jelaniwoods" class="icon-link" target="_blank"><i class="bi bi-github"></i></a>
               <a href="https://medium.com/@jelaniwoods" class="icon-link" target="_blank"><i class="bi bi-medium"></i></a>
               <a href="https://www.linkedin.com/in/jelanimwoods/" class="icon-link" target="_blank"><i class="bi bi-linkedin"></i></a>
-              <a href="mailto:jelanimwoods@gmail.com" class="icon-link" target="_blank"><i class="bi bi-envelope"></i></a>
+              <span class="icon-link" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="jelanimwoods at gmail.com">
+                <i class="bi bi-envelope"></i>
+              </span>
             </div>
           </div>
         </div>
       </div>
     </div>
+      <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    </script>
   </body>
 </html>
